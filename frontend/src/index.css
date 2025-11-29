@@ -1,20 +1,23 @@
-
-
+/* keep Tailwind directives if using Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* GLOBAL STYLING */
+/* Smooth scroll and safe spacing */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Make sure body has a neutral background that matches layout */
 body {
-  @apply bg-gray-100 text-gray-800 antialiased;
-  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
+/* Optional: small helper for hero sections if you want them fullscreen below the fixed navbar */
+.hero-offset {
+  padding-top: 20px; /* used in hero components if needed */
 }
 
-::-webkit-scrollbar-thumb {
-  background: #c5c5c5;
-  border-radius: 10px;
-}
+
